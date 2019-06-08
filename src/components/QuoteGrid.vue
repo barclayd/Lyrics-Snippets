@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <quote :key="index" @click.native="removeLyric(index)" v-for="(quote, index) in quotes">"{{ quote }}" </quote>
+    <quote :key="index" @click.native="removeLyric(index)" v-for="(quote, index) in quotes">"{{ quote }}"</quote>
   </div>
 </template>
 

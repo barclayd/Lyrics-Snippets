@@ -1,8 +1,14 @@
 <template>
   <div class="container">
-    <h1>Hello World</h1>
     <new-quote @quoteAdded="newQuote" />
     <quote-grid :quotes="quotes" />
+    <div class="row info">
+      <div class="col-sm-12 text-center">
+        <div class="alert alert-info" role="alert">
+          Click on a lyric to remove it
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -27,4 +33,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+  .info {
+    margin: 20px;
+  }
+</style>

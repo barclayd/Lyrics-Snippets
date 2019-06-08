@@ -1,4 +1,4 @@
-# Street Fighter
+# Lyrics Snippets
 
 Store and save your favourite lyrical quotes. 
 

@@ -1,11 +1,31 @@
 <template>
-  <div></div
-></template>
+  <div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="panel panel-default">
+      <div class="panel-body quote">
+        <slot />
+      </div>
+    </div>
+  </div></template>
 
 <script>
-export default {
-  name: 'Quote',
-};
 </script>
 
-<style scoped></style>
+<style scoped>
+  .panel-body {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    color: #778899;
+    border: 5px solid #D3D3D3;
+    border-radius: 10px;
+    padding: 20px;
+
+  }
+
+  .quote {
+    cursor: pointer;
+  }
+
+  .quote:hover {
+    background-color: #FA8072;
+  }
+</style>

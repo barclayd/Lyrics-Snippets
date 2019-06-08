@@ -1,6 +1,7 @@
 <template>
   <div class="container">
-    <progress-bar :percentage="(this.quotes.length / maxQuotes) * 100" />
+    <h1 class="display-4 text-center" style="color: #66baa2">Lyrics Snippets</h1>
+    <progress-bar :maxQuotes="maxQuotes" :percentage="(this.quotes.length / maxQuotes) * 100" />
     <new-quote @quoteAdded="newQuote" />
     <quote-grid :quotes="quotes" />
     <div class="row info">

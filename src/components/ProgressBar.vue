@@ -1,7 +1,7 @@
 <template>
   <div class="text-center header">
     <h4>Quotes Added</h4>
-    <div class="progress">
+    <div class="progress new-quote">
       <div
         class="progress-bar progress-bar-striped progress-bar-animated"
         role="progressbar"
@@ -9,13 +9,16 @@
         aria-valuemin="0"
         aria-valuemax="100"
         :style="{ width: percentage + '%' }"
-      ></div>
-    </div></div
-></template>
+      >
+        {{ percentage > 0 ? `${percentage / 10}/${maxQuotes}` : null }}
+      </div>
+    </div>
+  </div></template
+>
 
 <script>
 export default {
-  props: ['percentage'],
+  props: ['percentage', 'maxQuotes'],
   name: 'ProgressBar',
 };
 </script>

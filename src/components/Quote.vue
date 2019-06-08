@@ -20,6 +20,10 @@
     padding: 20px;
   }
 
+  .panel-body:nth-child(even) {
+    color: blueviolet;
+  }
+
   .quote {
     cursor: pointer;
   }

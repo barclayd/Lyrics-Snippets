@@ -1,27 +1,30 @@
 <template>
-  <div class="row">
-    <form>
-      <div
-        class="col-sm-8 col-sm-offset-2 col-xs-12 col-md-6 col-md-offset-3 form-group"
-      >
-        <label>Quote</label>
+  <form>
+    <div class="form-group row new-quote">
+      <div class="col-sm-12 text-center">
+        <h4>Enter a favourite lyric</h4>
+      </div>
+    </div>
+    <div class="form-group row new-quote">
+      <label for="quote" class="col-sm-2 col-form-label">Quote</label>
+      <div class="col-sm-10">
         <textarea
           @keyup.enter="createNew"
           class="form-control"
+          id="quote"
           rows="3"
-          cols="1000"
           v-model="quote"
         ></textarea>
       </div>
-      <div
-        class="col-sm-8 col-sm-offset-2 col-xs-12 col-md-6 col-md-offset-3 form-group"
-      >
+    </div>
+    <div class="form-group row new-quote">
+      <div class="col-sm-8">
         <button class="btn btn-primary" @click.prevent="createNew">
           Add Quote
         </button>
       </div>
-    </form>
-  </div>
+    </div>
+  </form>
 </template>
 
 <script>
@@ -31,11 +34,17 @@ export default {
   }),
   methods: {
     createNew() {
-      this.$emit('quoteAdded', this.quote);
-      this.quote = '';
+      if (this.quote.trim().length > 0) {
+        this.$emit('quoteAdded', this.quote);
+        this.quote = '';
+      }
     },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .new-quote {
+    margin-left: 50px !important;
+  }
+</style>

@@ -15,10 +15,9 @@
     font-family: 'Pacifico', cursive;
     font-size: 24px;
     color: #778899;
-    border: 5px solid #D3D3D3;
+    border: 1px solid #D3D3D3;
     border-radius: 10px;
     padding: 20px;
-
   }
 
   .quote {

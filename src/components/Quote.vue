@@ -20,15 +20,16 @@
     padding: 20px;
   }
 
-  .panel-body:nth-child(even) {
-    color: blueviolet;
+  .quote.panel-body:nth-child(even) {
+    color: blueviolet !important;
   }
 
   .quote {
     cursor: pointer;
+    margin: 10px;
   }
 
   .quote:hover {
-    background-color: #FA8072;
+    background-color: #ff8e8d;
   }
 </style>

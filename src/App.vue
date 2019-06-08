@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <progress-bar :percentage="(this.quotes.length / maxQuotes) * 100" />
     <new-quote @quoteAdded="newQuote" />
     <quote-grid :quotes="quotes" />
     <div class="row info">
@@ -15,11 +16,14 @@
 <script>
 import QuoteGrid from './components/QuoteGrid';
 import NewQuote from './components/NewQuote';
+import ProgressBar from './components/ProgressBar';
+
 export default {
   name: 'app',
   components: {
     QuoteGrid,
     NewQuote,
+    ProgressBar,
   },
   data: () => ({
     quotes: ["You may say I'm a dreamer;\n" + "But I'm not the only one"],
@@ -27,14 +31,20 @@ export default {
   }),
   methods: {
     newQuote(quote) {
-      this.quotes.push(quote);
+      if (this.quotes.length < this.maxQuotes) {
+        this.quotes.push(quote);
+      } else {
+        alert(
+          'Max number of lyrics added!\nPlease remove one before adding a new lyric snippet',
+        );
+      }
     },
   },
 };
 </script>
 
 <style scoped>
-  .info {
-    margin: 20px;
-  }
+.info {
+  margin: 20px;
+}
 </style>

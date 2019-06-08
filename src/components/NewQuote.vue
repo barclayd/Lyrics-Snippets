@@ -1,6 +1,6 @@
 <template>
   <form>
-    <div class="form-group row new-quote">
+    <div class="form-group row">
       <div class="col-sm-12 text-center">
         <h4>Enter a favourite lyric</h4>
       </div>
@@ -35,7 +35,7 @@ export default {
   methods: {
     createNew() {
       if (this.quote.trim().length > 0) {
-        this.$emit('quoteAdded', this.quote);
+        this.$emit('quoteAdded', this.quote.trim());
         this.quote = '';
       }
     },
@@ -44,7 +44,9 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (min-width: 577px) {
   .new-quote {
     margin-left: 50px !important;
   }
+}
 </style>

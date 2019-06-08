@@ -1,6 +1,12 @@
 <template>
   <div class="row">
-    <quote :key="index" @click.native="removeLyric(index)" v-for="(quote, index) in quotes">"{{ quote }}"</quote>
+    <quote
+      :key="index"
+      :idx="index"
+      @click.native="removeLyric(index)"
+      v-for="(quote, index) in quotes"
+      >"{{ quote }}"</quote
+    >
   </div>
 </template>
 
@@ -15,7 +21,7 @@ export default {
   methods: {
     removeLyric(idx) {
       this.quotes.splice(idx, 1);
-    }
+    },
   },
 };
 </script>

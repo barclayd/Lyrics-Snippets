@@ -43,7 +43,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 @media screen and (min-width: 577px) {
   .new-quote {
     margin-left: 50px !important;

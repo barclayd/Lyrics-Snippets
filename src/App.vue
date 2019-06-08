@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h1 class="display-4 text-center" style="color: #66baa2">Lyrics Snippets</h1>
+    <h1 class="display-4 text-center new-quote" style="color: #66baa2">Lyrics Snippets</h1>
     <progress-bar :maxQuotes="maxQuotes" :percentage="(this.quotes.length / maxQuotes) * 100" />
     <new-quote @quoteAdded="newQuote" />
     <quote-grid :quotes="quotes" />
-    <div class="row info">
+    <div class="row info new-quote">
       <div class="col-sm-12 text-center">
         <div class="alert alert-info" role="alert">
           Click on a lyric to remove it
